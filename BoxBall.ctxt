@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=BoxBall
+comment0.text=\r\nClass\ BoxBall\ -\ a\ graphical\ ball\ that\ does\ not\ observe\ the\ effect\ of\ gravity,\ but\ rather\ moves\ within\ the\ constraints\r\nof\ a\ drawn\ canvas.\ When\ the\ ball\ reaches\ an\ edge\ of\ the\ canvas\ it\ will\ 'bounce'\ off\ into\ the\ appropriate\ direction.\r\n\r\n\r\nThis\ movement\ can\ be\ initiated\ by\ repeated\ calls\ to\ the\ "move"\ method.\r\n\r\n\r\n@author\ Peter\ Basily\r\n@version\ 2018.10.14\r\n\r\n
+comment1.params=xPos\ yPos\ ballDiameter\ ballColor\ drawingCanvas
+comment1.target=BoxBall(int,\ int,\ int,\ java.awt.Color,\ Canvas)
+comment2.params=
+comment2.target=void\ draw()
+comment3.params=
+comment3.target=void\ erase()
+comment3.text=\r\n\ Erase\ this\ ball\ at\ its\ current\ position.\r\n
+comment4.params=
+comment4.target=void\ checkyBounds()
+comment4.text=\r\n\ Move\ this\ ball\ according\ to\ its\ position\ and\ speed\ and\ redraw.\r\n
+comment5.params=
+comment5.target=void\ checkxBounds()
+comment6.params=
+comment6.target=void\ move()
+comment7.params=
+comment7.target=int\ getXPosition()
+comment7.text=\r\n\ return\ the\ horizontal\ position\ of\ this\ ball\r\n
+comment8.params=
+comment8.target=int\ getYPosition()
+comment8.text=\r\n\ return\ the\ vertical\ position\ of\ this\ ball\r\n
+numComments=9

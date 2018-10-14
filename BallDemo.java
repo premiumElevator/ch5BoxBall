@@ -1,8 +1,8 @@
 import java.awt.Color;
 
 /**
- * Class BallDemo - a short demonstration showing animation with the 
- * Canvas class. 
+ * Class BallDemo - a short demonstration showing animation with the
+ * Canvas class.
  *
  * @author Bill Crosbie
  * @version 2015-March-BB
@@ -11,7 +11,7 @@ import java.awt.Color;
  * @version 2011.07.31
  */
 
-public class BallDemo   
+public class BallDemo
 {
     private Canvas myCanvas;
 
@@ -26,6 +26,21 @@ public class BallDemo
     /**
      * Simulate two bouncing balls
      */
+    public void bounce2()
+    {
+      myCanvas.setVisible(true);
+
+      BoxBall ball = new BoxBall(50, 50, 50, Color.BLUE, myCanvas);
+      ball.draw();
+      boolean finished = false;
+
+      while(!finished)
+      {
+        myCanvas.wait(50);
+        ball.move();
+        
+      }
+    }
     public void bounce()
     {
         int ground = 400;   // position of the ground line
@@ -36,9 +51,9 @@ public class BallDemo
         myCanvas.drawLine(50, ground, 550, ground);
 
         // crate and show the balls
-        BouncingBall ball = new BouncingBall(50, 50, 16, Color.BLUE, ground, myCanvas);
+        BouncingBall ball = new BouncingBall(80, 50, 16, Color.BLUE, ground, myCanvas);
         ball.draw();
-        BouncingBall ball2 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball2 = new BouncingBall(500, 80, 20, Color.RED, ground, myCanvas);
         ball2.draw();
 
         // make them bounce
