@@ -104,14 +104,16 @@ public class BoxBall
       }
   }
 
-  /**
-  * The bounds of x and y coordinates are the size of the canvas - the diameter of
-  * the ball.
-  */
+
   public void move()
   {
-    //I tried using canvas.getHeight()/Width() but they did not work so I had to hardcode canvas size.
-    //In the future, an implementation of using canvas height and width instead of hardcoding would be better.
+    /**
+    * The bounds of x and y coordinates are the size of the canvas - the diameter of
+    * the ball.
+    *
+    * I tried using canvas.getHeight()/Width() but they did not work so I had to hardcode canvas size.
+    * In the future, an implementation of using canvas height and width instead of hardcoding would be better.
+    */
     xBound = 600-diameter;
     yBound = 500-diameter;
       // remove from canvas at the current position
