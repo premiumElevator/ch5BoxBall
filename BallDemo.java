@@ -5,6 +5,9 @@ import java.util.ArrayList;
  * Class BallDemo - a short demonstration showing animation with the
  * Canvas class.
  *
+ * @author Peter Basily
+ * @version 2018.10.15
+ *
  * @author Bill Crosbie
  * @version 2015-March-BB
  *
@@ -27,8 +30,9 @@ public class BallDemo
     }
 
     /**
-     * Simulate two bouncing balls
-     */
+    * Creates a random number of randomly generated BoxBall objects in an ArrayList
+    * and simulates them bouncing inside a box with edge collision detection.
+    */
     public void boxBounce()
     {
       int numOfBalls = 5+((int) (Math.random() * ((30-5)+1)));
@@ -36,13 +40,17 @@ public class BallDemo
       myCanvas.setVisible(true);
       for(int i = 0; i < numOfBalls;i++)
       {
+
         int r = (int)(Math.random()*256);
         int g = (int)(Math.random()*256);
         int b= (int)(Math.random()*256);
+        //uses 3 random values between 0-256 in red, green, blue to create a random color
         Color color = new Color(r, g, b);
+        //uses a random integer for between 25 and 10 for the diameter of the balls
         int d = 10+((int)(Math.random() * ((25 - 10) + 1)));
         int x = new Random().nextInt(Math.abs(600));
         int y = new Random().nextInt(Math.abs(500));
+        //creates a BoxBall object with the aformentioned paramaters
         balls.add(new BoxBall(x, y, d, color, myCanvas));
         balls.get(i).draw();
       }
@@ -51,7 +59,9 @@ public class BallDemo
 
       while(!finished)
       {
-
+        /**
+        * uses the sizes of the arraylist to iterate through the Arraylist and move each BoxBall object
+        */
         for(int i = 0; i < numOfBalls; i++)
         {       if(numOfBalls>5)
                 {
@@ -67,6 +77,9 @@ public class BallDemo
         }
       }
     }
+    /**
+     * Simulate two bouncing balls
+     */
     public void bounce()
     {
         int ground = 400;   // position of the ground line
@@ -96,4 +109,3 @@ public class BallDemo
         }
     }
 }
-//}
